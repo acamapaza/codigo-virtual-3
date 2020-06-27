@@ -1,0 +1,29 @@
+/* :nth-child([posicion]) */
+/* de todos lo Li en un mismo nivel, aplicar el estilo al de la posicion 2 */
+li:nth-child(2){
+    color:red;
+}
+li:first-child{
+    color: blue;
+}
+li:last-child{
+    color: brown;
+}
+/* odd - -even */
+tbody tr:nth-child(odd){
+background-color: rgb(0, 85, 100);
+}
+tbody tr:nth-child(even){
+    background-color: rgb(100, 98, 0);
+    }
+thead {
+    background-color: rgb(100, 98, 0);
+}
+
+input:not([type="text"])
+{
+    border-radius: 10px;
+}
+input[type="text"]{
+    background: lightpink;
+}

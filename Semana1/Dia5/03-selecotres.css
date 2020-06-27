@@ -1,0 +1,20 @@
+/* selector de etiqueta  */
+/* todos los label de la pagina  */
+label{
+color: teal;
+}
+/* Compartiendo atributos */
+/* estilo afecta a todos los h1 y h2 */
+h2,h1{
+    color: purple;
+}
+/* Selector de Hijos a Cualquier nivel */
+/* todos los hijos, nietos o visnietos que sean li y esten dentro de un ul */
+ul li{
+    color: red;
+}
+/* selector de hijos en primer nivel o hijos directos */
+/* todos los li que sean hijos en primer nivel o sean hijos diretos enun ol */
+ol > li,input{
+    color: blue;
+}
