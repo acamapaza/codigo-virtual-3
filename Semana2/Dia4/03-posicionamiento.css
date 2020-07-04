@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* definiendo variables */
+  --naranja: rgb(255, 182, 74);
+  --rosado: rgb(255, 82, 163);
+  --crecer: 1;
+}
+body {
+  background-color: #333;
+}
+header {
+  height: 60px;
+  background: -webkit-linear-gradient(right, var(--naranja), var(--rosado));
+}
+.principal {
+  margin: 50px auto 0 auto;
+  width: 50%;
+  height: 1500px;
+  box-shadow: #bbb 0px 0px 20px;
+  position: relative;
+}
+.section1 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--naranja);
+  /* pstatic: el elemento no se puede mover ni modificarse su posicion */
+  /* posicionamiento relative el elemento esta listo pra moverse */
+  position: relative;
+  /* mover n pixeles desde la ixquierda de su posicion original */
+  left: 50px;
+  /* mover n pixeles desde el teho de s posicion inicial */
+  top: 50px;
+  /* profundidad el eje Z */
+  z-index: 200;
+}
+.section2 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--rosado);
+  /* pstatic: el elemento no se puede mover ni modificarse su posicion */
+  /* posicionamiento relative el elemento esta listo pra moverse */
+  position: relative;
+  z-index: 100;
+}
+.section3 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--naranja);
+  /* pstatic: el elemento no se puede mover ni modificarse su posicion */
+  /* posicionamiento relative el elemento esta listo pra moverse */
+  position: relative;
+  /* z-index: 100; */
+  /* left: calc(100% - 100px); */
+  left: 100%;
+  /* el la propiedad translate, cuando se hablan en % el % es tomado de 
+  acuerdo al tamaño del mismo elemento no del padre */
+  transform: translate(-100%, 0);
+}
+.texto {
+  color: white;
+}
+/* floating action button */
+.fab {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(top, var(--rosado), var(--naranja));
+  /*  cuando la posicion es absoluta es recomendable que el padre del elemnto tenga posicion relativa, de modo que el elemnto se mueva respecto de este*/
+  /* cuando la ñosicione s absoluta los elementos hermanos no respetan la posicion original del elemnto que se esta moviendo */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: all 1s ease-in;
+}
+.margen{
+    margin-right: 60px;
+    margin-bottom: 60px;
+   
+}
+.izquierdo{
+    left: 60px;
+    bottom: 60px;
+    box-shadow: var(--rosado) 0px 2px 15px;
+    /* fixed: posicionamiento de un elemento respecto del VIEWPORT (Area visible del Navegador) */
+    position: fixed;
+}
+.fab:hover{
+    transform: scale(var(--crecer));
+}
+.zoom-11{
+    --crecer: 1.1;
+}
+.zoom-15{
+    --crecer: 1.5;
+}
+.zoom-20{
+    --crecer: 2;
+}
