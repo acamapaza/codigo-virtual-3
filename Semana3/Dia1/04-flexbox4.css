@@ -29,7 +29,7 @@ header{
     cursor: pointer;
     border-radius: 2px;
     overflow: hidden;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 20px
   }
   .card, .card *{
@@ -112,15 +112,22 @@ header{
   .menu{
       
       background-color: rgb(233, 172, 166);
-      width: 240px;
-      flex: 1;
+      min-width: 240px;
+      /* flex: 1; */
+      height: calc(100vh - 60px);
+      position: fixed;
+      top: 60px;
+      left: 0;
   }
   .principal{
-      flex: 4;
+      flex: 1;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-left: 240px;
   }
   .main{
       display: flex;
+      /* la unidad vh 100% de la altura del viewport y vw 100% del ancho del viewport */
+      min-height: calc(100vh - 60px);
   }
